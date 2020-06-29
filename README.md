@@ -1,6 +1,6 @@
 
 ###### First
-```npm instal```
+```npm install```
 
 ###### Then 
 ```npm run start```
