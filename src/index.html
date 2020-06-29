@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega test</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="upload-popup">
+        <button class="popup-close-button" aria-label="Close">
+            <img src="./assets/cancel.png" alt="Close">
+        </button>
+        <div class="popup-body">
+            <div class="form-container">
+                <h1 class="form-title">File upload</h1>
+                <hr class="divider">
+                <form class="file-form">
+                    <div class="input-container">
+                        <label for="passpharase">
+                            Enter Password to Encrypt Files
+                        </label>
+                        <input id="passpharase" type="password" name="password" required>
+                    </div>
+                    <hr class="divider">
+                    <div class="input-container">
+                        <label for="filepath">
+                            Upload file
+                        </label>
+                        <input type="text" id="filepath" name="filepath" class="filepath" required>
+                    </div>
+                   <div class="button-container">
+                       <label class="default-button browse-button" for="file">browse</label>
+                        <input id="file" type="file" name="file" hidden>
+                       <button class="default-button upload-button" type="submit">upload</button>
+                   </div> 
+                </form>
+            </div>
+            <div class="file-container">
+                <h2 class="file-title">Progress</h2>
+                <hr class="divider dark">
+                <table class="file-table">
+                    <thead>
+                        <tr>
+                            <td>date</td>
+                            <td>name</td>
+                            <td>progress</td>
+                        </tr>
+                    </thead>
+                    <tbody class="file-body-container">
+                  
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <template id="file-template">
+        <tr class="file-description">
+            <td class="date"></td>
+            <td class="path"></td>
+            <td class="progress"><progress max="100" value="0"></progress></td>
+        </tr>
+    </template>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
